@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoaderComponent } from './loader/loader.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [
-    LoaderComponent
-  ],
-  exports: [
-    LoaderComponent
-  ]
+  imports: [CommonModule, MDBBootstrapModule.forRoot()],
+  declarations: [LoaderComponent, CarouselComponent],
+  exports: [LoaderComponent, CarouselComponent]
 })
-export class SharedModule { }
+export class SharedModule {}

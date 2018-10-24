@@ -6,9 +6,11 @@ import { ExchangeRoutingModule } from './exchange-routing.module';
 import { ExchangeComponent } from './exchange.component';
 import { SharedModule } from '@app/shared';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ExchangeService } from '@app/exchange/exchange.service';
 
 @NgModule({
   imports: [CommonModule, TranslateModule, ExchangeRoutingModule, SharedModule, MDBBootstrapModule.forRoot()],
-  declarations: [ExchangeComponent]
+  declarations: [ExchangeComponent],
+  providers: [ExchangeService]
 })
 export class ExchangeModule {}

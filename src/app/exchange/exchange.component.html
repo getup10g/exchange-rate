@@ -1,47 +1,46 @@
+<div class="row justify-content-center">
+    <app-loader [isLoading]="isLoading"></app-loader>
+</div>
 <app-carousel
-        (activeSlide)="activeSlide($event)"
->
+        *ngIf="!isLoading"
+        (activeSlide)="activeSlide($event)">
     <ng-container carousel-first-slide>
-        <!-- Card -->
         <mdb-card>
             <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                <!-- Card img -->
                 <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
                 <a> <div class="mask"></div> </a>
             </div>
-            <!--Card content-->
             <mdb-card-body>
-                <!--Title-->
-                <mdb-card-title> <h4>Card Title</h4> </mdb-card-title>
-
-                <!--Text-->
-                <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's content. </mdb-card-text>
-
-                <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+                <mdb-card-title> <h4>{{gbpEur.name}}</h4> </mdb-card-title>
+                <mdb-card-text>Rate: {{gbpEur.value}} </mdb-card-text>
+                <mdb-card-text>Time: {{time}} </mdb-card-text>
             </mdb-card-body>
         </mdb-card>
     </ng-container>
     <ng-container carousel-second-slide>
-        <!-- Card -->
         <mdb-card>
             <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                <!-- Card img -->
-                <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
+                <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(68).jpg" alt="Card image cap"></mdb-card-img>
                 <a> <div class="mask"></div> </a>
             </div>
-            <!--Card content-->
             <mdb-card-body>
-                <!--Title-->
-                <mdb-card-title> <h4>Card Title</h4> </mdb-card-title>
-
-                <!--Text-->
-                <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's content. </mdb-card-text>
-
-                <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+                <mdb-card-title> <h4>{{chfUsd.name}}</h4> </mdb-card-title>
+                <mdb-card-text>Rate: {{chfUsd.value}} </mdb-card-text>
+                <mdb-card-text>Time: {{time}} </mdb-card-text>
             </mdb-card-body>
         </mdb-card>
     </ng-container>
     <ng-container carousel-third-slide>
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg" alt="First slide">
+        <mdb-card>
+            <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+                <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(69).jpg" alt="Card image cap"></mdb-card-img>
+                <a> <div class="mask"></div> </a>
+            </div>
+            <mdb-card-body>
+                <mdb-card-title> <h4>{{usdGbp.name}}</h4> </mdb-card-title>
+                <mdb-card-text>Rate: {{usdGbp.value}} </mdb-card-text>
+                <mdb-card-text>Time: {{time}} </mdb-card-text>
+            </mdb-card-body>
+        </mdb-card>
     </ng-container>
 </app-carousel>

@@ -1,6 +1,6 @@
 <div id="container">
     <!--Carousel Wrapper-->
-    <mdb-carousel #carouselRef [isControls]="false" [interval]="0" (activeSlideChange)="activeSlide($event)">
+    <mdb-carousel #carouselRef [isControls]="false" [interval]="0" (activeSlideChange)="emitSlideInfo($event)">
         <mdb-carousel-item>
             <div class="view w-100 d-flex justify-content-center">
                 <ng-content select="[carousel-first-slide]">
